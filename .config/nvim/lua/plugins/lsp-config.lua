@@ -11,7 +11,7 @@ return {
     lazy = false,
     opts = {
       auto_install = true,
-      ensure_installed = { "clangd", "lua_ls", "ts_ls", "pyright" },
+      ensure_installed = { "clangd", "lua_ls", "ts_ls", "pyright", "rust_analyzer" },
     },
   },
   {
@@ -52,6 +52,10 @@ return {
         capabilities = capabilities,
       })
 
+      vim.lsp.config("rust_analyzer", {
+        capabilities = capabilities,
+      })
+
       -- Enable all configured servers
       vim.lsp.enable({
         "ts_ls",
@@ -61,6 +65,7 @@ return {
         "pyright",
         "tailwindcss",
         "eslint",
+        "rust_analyzer",
       })
 
       vim.diagnostic.config({
