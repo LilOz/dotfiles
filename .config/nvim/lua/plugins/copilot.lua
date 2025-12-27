@@ -12,6 +12,14 @@ return {
 					print("✅ Copilot enabled")
 				end
 			end, { desc = "Toggle Copilot" })
+
+			local map = vim.keymap.set
+			map(
+				"i",
+				"<C-f>",
+				"copilot#Accept('<CR>')",
+				{ noremap = true, silent = true, expr = true, replace_keycodes = false }
+			)
 		end,
 	},
 	{
