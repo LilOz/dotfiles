@@ -22,6 +22,7 @@ vim.keymap.set("v", "<leader>y", '"+y')     -- Copy selected text to clipboard
 vim.keymap.set("n", "<leader>y", '"+y')     -- Copy current line to clipboard
 vim.keymap.set("n", "<leader>p", '"+p')     -- Paste from clipboard
 vim.keymap.set("v", "<leader>p", '"+p')     -- Paste from clipboard
+vim.keymap.set("x", "p", '"_dP', { silent = true }) -- Paste without overwriting unnamed register
 
 vim.keymap.set({ "n", "x", "o" }, "H", "^") -- Move to start
 vim.keymap.set({ "n", "x", "o" }, "L", "$") -- Move to end
