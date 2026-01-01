@@ -148,3 +148,5 @@ export NVM_DIR="$HOME/.nvm"
 
 alias lg='lazygit'
 alias gs="git status"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

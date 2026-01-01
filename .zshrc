@@ -59,4 +59,4 @@ setopt hist_find_no_dups
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Shell integrations
-eval "$(fzf --zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
