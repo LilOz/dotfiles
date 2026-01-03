@@ -36,7 +36,7 @@ return {
       vim.lsp.config("clangd", {
         capabilities = capabilities,
         init_options = {
-          fallbackFlags = { "--std=c++20" },
+          fallbackFlags = { "--std=c++23" },
         },
       })
 
