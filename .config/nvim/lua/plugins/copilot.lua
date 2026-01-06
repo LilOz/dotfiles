@@ -1,6 +1,10 @@
 return {
 	{
 		"github/copilot.vim",
+		init = function()
+			-- Disable Copilot's default <Tab> mapping
+			vim.g.copilot_no_tab_map = true
+		end,
 		config = function()
 			-- Toggle Copilot on/off
 			vim.keymap.set("n", "<leader>ct", function()
@@ -13,12 +17,12 @@ return {
 				end
 			end, { desc = "Toggle Copilot" })
 
-			local map = vim.keymap.set
-			map(
+			-- Accept Copilot with Ctrl+f instead
+			vim.keymap.set(
 				"i",
 				"<C-f>",
 				"copilot#Accept('<CR>')",
-				{ noremap = true, silent = true, expr = true, replace_keycodes = false }
+				{ expr = true, silent = true, replace_keycodes = false }
 			)
 		end,
 	},
