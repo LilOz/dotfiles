@@ -29,3 +29,7 @@ vim.keymap.set("x", "p", '"_dP', { silent = true }) -- Paste without overwriting
 
 vim.keymap.set({ "n", "x", "o" }, "H", "^") -- Move to start
 vim.keymap.set({ "n", "x", "o" }, "L", "$") -- Move to end
+
+-- C-s to save
+vim.keymap.set("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>", { noremap = true, silent = true })
