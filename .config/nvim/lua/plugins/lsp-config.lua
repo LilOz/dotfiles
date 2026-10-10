@@ -10,7 +10,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		lazy = false,
 		opts = {
-			auto_install = true,
+			automatic_enable = true,
 			ensure_installed = { "clangd", "lua_ls", "ts_ls", "pyright", "rust_analyzer" },
 		},
 	},
