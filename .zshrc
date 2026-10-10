@@ -60,3 +60,5 @@ setopt hist_find_no_dups
 
 # Shell integrations
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+. "$HOME/.local/bin/env"
