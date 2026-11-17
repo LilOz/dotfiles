@@ -62,3 +62,9 @@ setopt hist_find_no_dups
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 . "$HOME/.local/bin/env"
+
+# Claude Code - Local Ollama
+export ANTHROPIC_BASE_URL="http://localhost:11434"
+export ANTHROPIC_AUTH_TOKEN="ollama"
+export ANTHROPIC_API_KEY=""
+export CLAUDE_CODE_MAX_CONTEXT_TOKENS=65536
